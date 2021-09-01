@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Planner</th>
+            <th>Agenda</th>
+            <th>Venue</th>
+            <th>Attendees</th>
+            <th>Name</th>
+        </tr>
+    {% for event in events %}
+    <tr>
+        <td>{{ event.event_planner}} </td>
+        <td>{{ event.event_agenda}} </td>
+        <td>{{ event.event_venue}} </td>
+        <td>{{ event.event_attendees}} </td>
+        <td>{{ event.event_name}} </td>
+    </tr>
+    {%endfor%}
+</table>
+<style>
+table, td, th ,tr{
+text-align: left;
+border: 20px;
+color: antiquewhite;
+border: 1px solid #080808;
+border-collapse: collapse;
+background-color:linear-gradient(top,#3c3c3c 0%,#222222 100%);
+background: -webkit-linear-gradient(top,#3c3c3c 0%,#222222 100%);
+}
+table {
+border-collapse: collapse;
+width: 50%;
+}
+th, td {
+padding: 15px;
+}
+</style>
+</body>
+</html>

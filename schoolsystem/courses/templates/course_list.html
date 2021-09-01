@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table class="content-table">
+        <tr >
+            <th>Course Name</th>
+            <th>Trainer</th>
+            <th>Coursecode</th>
+            <th>Course Description</th>
+        </tr>
+    {% for course in courses %}
+    <tr>
+        <td>{{ course.trainer}} </td>
+        <td>{{ course.syllabus}} </td>
+        <td>{{ course.course_code}} </td>
+        <td>{{ course.coursedescription}} </td>
+    </tr>
+    {%endfor%}
+</table >
+<style>
+tr{
+    text-align:left;
+    font-weight: bold;
+    background-color: rgb(156, 148, 112);
+    color: cornsilk;
+    text-align: left;
+}
+td{
+    padding: 12px 15px;
+}
+table, td, th,tr {
+border: 20px;
+color: antiquewhite;
+text-align: left;
+border: 1px solid #080808;
+border-collapse: collapse;
+background-color:linear-gradient(top,#3c3c3c 0%,#222222 100%);
+background: -webkit-linear-gradient(top,#3c3c3c 0%,#222222 100%);
+
+}
+.content-table tr{
+padding: 52px 45px;
+}
+table {
+border-collapse: collapse;
+width: 50%;
+text-align: center;
+}
+th, td {
+padding: 15px;
+}
+.content-table{
+    border-collapse: collapse;
+    margin:25px 0;    
+    
+}
+</style>
+</body>
+</html>
